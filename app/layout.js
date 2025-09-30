@@ -26,8 +26,8 @@ const headingFont = Kanit({ subsets: ["thai"], weight: ["600","700"], variable: 
 export default function RootLayout({ children }) {
   return (
     <html lang="th">
-      <body>
-        <header className="border-b border-white/10">
+      <body className={`${bodyFont.variable} ${headingFont.variable}`}>
+        <header className="border-b border-byf-border">
           <nav className="container py-4 flex items-center justify-between">
             <Link href="/" className="font-semibold text-lg no-underline">
               BookYourFuture
@@ -41,7 +41,7 @@ export default function RootLayout({ children }) {
           </nav>
         </header>
         <main>{children}</main>
-        <footer className="section text-white/60">
+        <footer className="section text-gray-600">
           <div className="container flex flex-col md:flex-row gap-4 md:items-center md:justify-between">
             <p>© {new Date().getFullYear()} Book Your Future</p>
             <p className="text-sm">Made with Next.js on Vercel</p>
