@@ -18,6 +18,10 @@ export const metadata = {
 
 import "./globals.css";
 import Link from "next/link";
+import { Noto_Sans_Thai, Kanit } from "next/font/google";
+
+const bodyFont = Noto_Sans_Thai({ subsets: ["thai"], weight: ["400","500"], variable: "--font-body" });
+const headingFont = Kanit({ subsets: ["thai"], weight: ["600","700"], variable: "--font-heading" });
 
 export default function RootLayout({ children }) {
   return (
