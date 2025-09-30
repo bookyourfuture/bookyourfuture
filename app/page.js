@@ -22,35 +22,12 @@ export default function Home() {
           </div>
           <div className="card">
             <h3>ไฮไลท์</h3>
-            <ul className="list-disc ml-6 mt-3 space-y-2 text-white/80">
+            <ul className="list-disc ml-6 mt-3 space-y-2 text-gray-700">
               <li>Framework: 3-Bucket, Risk Management, Retirement Income</li>
               <li>ความรู้ + เครื่องมือ + แผนเฉพาะคุณ (ไม่ขายของแข็ง)</li>
               <li>เชื่อมต่อ LINE OA, นัดคุยผ่าน Tally</li>
             </ul>
           </div>
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="container grid md:grid-cols-3 gap-6">
-          {[
-            {title:"Clarity First", body:"ทำแผนที่เข้าใจง่าย เห็นเงินไหลเข้าออกชัดเจน"},
-            {title:"Protect & Grow", body:"บาลานซ์ระหว่างคุ้มครอง-เติบโต ด้วยเครื่องมือเหมาะสม"},
-            {title:"Actionable", body:"เช็คลิสต์ลงมือทำ + ระบบติดตามผล"},
-          ].map((f)=>(
-            <div key={f.title} className="card">
-              <h3>{f.title}</h3>
-              <p className="mt-2 text-white/80">{f.body}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="container text-center">
-          <h2>พร้อมเริ่มวางแผนแล้วหรือยัง?</h2>
-          <p className="lead mt-3">จอง Future Talk (15–30 นาที) เพื่อถอดโจทย์และออกแบบทางเลือก</p>
-          <Link className="btn mt-6 no-underline" href="/contact">จอง Future Talk</Link>
         </div>
       </section>
     </>
