@@ -3,8 +3,10 @@
 @tailwind utilities;
 
 :root {
-  --bg: #0a0a0a;
-  --fg: #ffffff;
+  --bg: #ffffff;
+  --fg: #0a0a0a;
+  --font-body: ui-sans-serif;
+  --font-heading: ui-sans-serif;
 }
 
 html, body {
@@ -14,30 +16,42 @@ html, body {
 body {
   background: var(--bg);
   color: var(--fg);
-  font-feature-settings: "ss01" on, "ss02" on;
+  font-family: var(--font-body), "Noto Sans Thai", sans-serif;
 }
-a {
-  @apply underline underline-offset-4;
-}
-.container {
-  @apply max-w-6xl px-6 mx-auto;
-}
-.btn {
-  @apply inline-flex items-center gap-2 px-5 py-3 rounded-md font-medium border border-white/20 hover:bg-white hover:text-black transition;
-}
-.badge {
-  @apply text-xs px-2 py-1 rounded bg-white/10;
-}
-.section {
-  @apply container py-16 md:py-24;
-}
+
 h1,h2,h3 {
+  font-family: var(--font-heading), "Kanit", sans-serif;
+  font-weight: 600;
   @apply tracking-tight;
 }
 h1 { @apply text-4xl md:text-6xl font-semibold; }
 h2 { @apply text-3xl md:text-4xl font-semibold; }
 h3 { @apply text-2xl md:text-3xl font-semibold; }
-p.lead { @apply text-lg md:text-xl text-white/80; }
+
+p.lead { @apply text-lg md:text-xl text-gray-700; }
+
+.container { @apply max-w-6xl px-6 mx-auto; }
+
+.section { @apply container py-16 md:py-24; }
+
+a { @apply underline underline-offset-4; }
+
+/* ปุ่ม */
+.btn {
+  @apply inline-flex items-center gap-2 px-5 py-3 rounded-md font-medium transition;
+  @apply bg-byf-primary text-white hover:opacity-90;
+}
+
+/* การ์ด */
 .card {
-  @apply p-6 rounded-lg bg-white/5 border border-white/10;
+  @apply p-6 rounded-lg border;
+  background-color: theme("colors.byf.secondary");
+  border-color: theme("colors.byf.border");
+}
+
+/* Badge */
+.badge {
+  @apply text-xs px-2 py-1 rounded;
+  background-color: theme("colors.byf.primary");
+  color: white;
 }

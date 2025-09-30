@@ -6,14 +6,16 @@ module.exports = {
   ],
   theme: {
     extend: {
-      colors: {
-        byf: {
-          green: "#DAF100", // Book Green (from memory; can be changed)
-          pink: "#F7E5DA",
-          dark: "#0A0A0A",
-        },
-      },
+  colors: {
+    byf: {
+      primary: "#014421",   // Forest Green
+      secondary: "#F7E5DA", // Soft Beige
+      text: "#0A0A0A",
+      bg: "#FFFFFF",
+      border: "#E5E5E5",
     },
+  },
+},
   },
   plugins: [],
 };
